@@ -18,9 +18,14 @@ class _pageviewState extends State<pageview> {
   Widget build(BuildContext context) {
     hptrue = Provider.of<Homeprovider>(context,listen: true);
     hpfalse = Provider.of<Homeprovider>(context,listen: false);
+
+    int i = ModalRoute.of(context)!.settings.arguments as int;
+
     return SafeArea(child: Scaffold(
       backgroundColor: Colors.black,
-      body: PageView.builder(itemBuilder: (context, index) {
+      body: PageView.builder(
+        controller: PageController(initialPage: i),
+          itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.all(15),
           child: Container(

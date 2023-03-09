@@ -36,7 +36,7 @@ class _galleryState extends State<gallery> {
                 padding: const EdgeInsets.all(2),
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, 'pageview',arguments: hpfalse!.pic[index]);
+                    Navigator.pushNamed(context, 'pageview',arguments: index);
                   },
                   child: Container(
                     height: 100,
